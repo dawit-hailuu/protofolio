@@ -3,34 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Dawit Hailu - Full-Stack Developer & Digital Solutions Builder | Addis Ababa</title>
-  <meta name="description" content="Dawit Hailu is a full-stack developer in Addis Ababa, Ethiopia, building modern business websites, QR digital menus for hotels and restaurants, custom web applications and business management systems." />
+  <title>Dawit Hailu - Software Engineer | Java, Spring Boot &amp; Full-Stack</title>
+  <meta name="description" content="Dawit Hailu, software engineer in Addis Ababa building Java and Spring Boot backends and full-stack apps. Open to internships and junior roles." />
   <meta name="author" content="Dawit Hailu" />
   <meta name="theme-color" content="#09090b" />
   <meta name="color-scheme" content="dark" />
+  <link rel="canonical" href="https://dawitp.vercel.app/" />
 
-  <!-- Open Graph / social previews
-       TODO: after deploying, replace YOUR-DOMAIN.vercel.app with your real Vercel URL
-       so WhatsApp, Telegram and LinkedIn show the preview image. -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Dawit Hailu - Full-Stack Developer & Digital Solutions Builder" />
-  <meta property="og:description" content="I build digital experiences that help businesses grow - business websites, QR digital menus, custom web apps and management systems." />
-  <meta property="og:url" content="https://YOUR-DOMAIN.vercel.app/" />
-  <meta property="og:image" content="https://YOUR-DOMAIN.vercel.app/assets/og-image.png" />
+  <meta property="og:site_name" content="Dawit Hailu" />
+  <meta property="og:title" content="Dawit Hailu - Software Engineer | Java, Spring Boot &amp; Full-Stack" />
+  <meta property="og:description" content="Computer Science student at Mekelle University and former Backend Development Intern at Raras Technology. Open to internships and junior roles." />
+  <meta property="og:url" content="https://dawitp.vercel.app/" />
+  <meta property="og:image" content="https://dawitp.vercel.app/assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Dawit Hailu - Software Engineer, Java and Spring Boot" />
   <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Dawit Hailu - Full-Stack Developer" />
-  <meta name="twitter:description" content="Business websites, QR digital menus, custom web apps and management systems - built in Addis Ababa." />
-  <meta name="twitter:image" content="https://YOUR-DOMAIN.vercel.app/assets/og-image.png" />
+  <meta name="twitter:title" content="Dawit Hailu - Software Engineer" />
+  <meta name="twitter:description" content="Java and Spring Boot backends and the apps that use them. Open to internships and junior roles." />
+  <meta name="twitter:image" content="https://dawitp.vercel.app/assets/og-image.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dawit Hailu",
+    "jobTitle": "Software Engineer",
+    "url": "https://dawitp.vercel.app/",
+    "email": "mailto:dawith907@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Addis Ababa", "addressCountry": "ET" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Mekelle University" },
+    "knowsAbout": ["Java", "Spring Boot", "REST APIs", "PostgreSQL", "Angular", "React", "Node.js"],
+    "sameAs": ["https://github.com/dawit-hailuu", "https://www.linkedin.com/in/dawit-hailu-1ba74b274"]
+  }
+  </script>
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2309090b'/%3E%3Ctext x='15' y='45' font-family='Arial,Helvetica,sans-serif' font-weight='700' font-size='36' fill='%23f3f1ec'%3ED%3C/text%3E%3Ccircle cx='47' cy='42' r='4.5' fill='%238b7dff'/%3E%3C/svg%3E" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-  <link rel="preload" as="image" href="assets/profile.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/profile.jpg" imagesrcset="assets/profile-480.webp 480w, assets/profile-640.webp 640w, assets/profile-880.webp 880w" imagesizes="(max-width: 640px) calc(100vw - 60px), 440px" fetchpriority="high" />
   <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin />
   <link rel="preload" as="script" href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" crossorigin />
   <!-- Fonts load without blocking first paint; system fonts show until they arrive. -->
@@ -51,6 +66,7 @@
     /* Portrait loader: tries the fallbacks in data-fallbacks, then shows an elegant monogram. */
     window.__photoFallback = function (img) {
       var list = (img.getAttribute('data-fallbacks') || '').split(',').filter(Boolean);
+      img.removeAttribute('srcset');
       if (list.length) {
         img.setAttribute('data-fallbacks', list.slice(1).join(','));
         img.src = list[0];
@@ -76,7 +92,7 @@
       --line-2: rgba(255, 255, 255, 0.14);
       --text: #f3f1ec;
       --muted: #9b9ba5;
-      --dim: #6c6c76;
+      --dim: #83838d;
       --accent: #8b7dff;
       --accent-2: #6f97ff;
       --accent-soft: rgba(139, 125, 255, 0.14);
@@ -100,6 +116,7 @@
        2. BASE
        ========================================================= */
     *, *::before, *::after { box-sizing: border-box; }
+    [hidden] { display: none !important; }
     html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 8px); -webkit-text-size-adjust: 100%; }
     body {
       margin: 0;
@@ -293,7 +310,7 @@
     .mobile-menu li { overflow: hidden; }
     .mobile-menu li a {
       display: flex; align-items: baseline; gap: 16px;
-      font-size: clamp(2.4rem, 11vw, 3.4rem); font-weight: 500; letter-spacing: -0.04em; line-height: 1.15;
+      font-size: clamp(2.1rem, 9.5vw, 3.2rem); font-weight: 500; letter-spacing: -0.04em; line-height: 1.15;
       transform: translateY(100%); transition: transform .7s var(--ease);
     }
     .mobile-menu li a small { font-family: var(--font-mono); font-size: 12px; color: var(--dim); letter-spacing: .1em; }
@@ -302,7 +319,9 @@
     .menu-open .mobile-menu li:nth-child(3) a { transition-delay: .1s; }
     .menu-open .mobile-menu li:nth-child(4) a { transition-delay: .15s; }
     .menu-open .mobile-menu li:nth-child(5) a { transition-delay: .2s; }
+    .menu-open .mobile-menu li:nth-child(6) a { transition-delay: .25s; }
     .mobile-menu-foot { display: grid; gap: 18px; }
+    .mobile-menu-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .mobile-menu-foot p { color: var(--muted); font-size: 14px; }
     body.menu-open { overflow: hidden; }
 
@@ -353,11 +372,12 @@
     @keyframes pulse { 0% { transform: scale(.6); opacity: .8; } 100% { transform: scale(2); opacity: 0; } }
 
     .hero-title {
-      font-size: clamp(2.75rem, 6.6vw, 6.4rem);
+      font-size: clamp(2.2rem, 4.1vw, 3.6rem);
       font-weight: 500; line-height: .98; letter-spacing: -0.048em;
     }
     .line { display: block; overflow: hidden; padding: 0 .06em .1em 0; margin-bottom: -.1em; }
     .line > span { display: inline-block; will-change: transform; }
+    .hero-title .line { display: inline-block; vertical-align: top; }
     .hero-title .serif { font-size: 1.1em; line-height: .8; padding-right: .04em; }
     .hero-intro {
       margin-top: clamp(24px, 3vw, 36px); max-width: 540px;
@@ -756,6 +776,26 @@
     .bottle::before { content: ''; position: absolute; top: -12px; left: 9px; width: 16px; height: 14px; border-radius: 4px 4px 0 0; background: #3b1d0c; }
     .bottle::after { content: ''; position: absolute; left: 5px; right: 5px; top: 34px; height: 24px; border-radius: 4px; background: #fff7ec; }
 
+    /* AnswerFlow AI */
+    .pv-answer { --pv-bg: radial-gradient(80% 90% at 50% 100%, rgba(111,151,255,.26), transparent 70%), #0f1117; }
+    .af { position: relative; height: calc(100% - 30px); padding: 16px 18px; display: grid; gap: 9px; align-content: start; }
+    .af > .b { background: rgba(255,255,255,.08); }
+    .af > .b.lg { height: 10px; background: rgba(255,255,255,.18); margin-bottom: 4px; }
+    .af-pop {
+      position: absolute; top: 10px; right: 12px; width: 56%;
+      display: grid; gap: 8px; padding: 10px; border-radius: 12px;
+      background: #1d1d25; border: 1px solid rgba(255,255,255,.1);
+      box-shadow: 0 24px 48px -16px rgba(0,0,0,.8);
+    }
+    .af-head { display: flex; align-items: center; gap: 7px; font-size: 10px; font-weight: 600; color: rgba(255,255,255,.85); }
+    .af-head b { width: 14px; height: 14px; border-radius: 4px; background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+    .af-prov { display: flex; gap: 4px; }
+    .af-prov span { height: 14px; flex: 1; border-radius: 999px; background: rgba(255,255,255,.07); }
+    .af-prov span.on { background: rgba(139,125,255,.45); }
+    .af-q { height: 20px; border-radius: 7px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.06); }
+    .af-ans { display: grid; gap: 6px; padding: 9px; border-radius: 8px; background: rgba(139,125,255,.08); border: 1px solid rgba(139,125,255,.2); }
+    .af-ans .b { background: rgba(255,255,255,.16); }
+
     /* HCB Factory */
     .pv-hcb { --pv-bg: radial-gradient(80% 90% at 50% 100%, rgba(111,151,255,.26), transparent 70%), #0f1117; }
     .hcb { display: grid; grid-template-columns: 96px 1fr; height: calc(100% - 30px); }
@@ -888,7 +928,8 @@
     }
     .skill-row h3 { display: flex; align-items: baseline; gap: 12px; font-size: 1.4rem; letter-spacing: -0.03em; font-weight: 500; }
     .skill-row h3 small { font-family: var(--font-mono); font-size: 11.5px; color: var(--dim); font-weight: 400; }
-    .skill-row p { margin-top: 8px; color: var(--muted); font-size: 14.5px; max-width: 300px; }
+    .skill-row p { margin-top: 8px; color: var(--muted); font-size: 14.5px; max-width: 320px; }
+    .skill-row p b { color: var(--text); font-weight: 500; }
     .skill-chips { display: flex; flex-wrap: wrap; gap: 8px; align-content: start; }
     .skill-chips li {
       display: inline-flex; align-items: center; gap: 8px;
@@ -914,6 +955,11 @@
     .exp .role span { color: var(--muted); }
     .exp p { color: var(--muted); font-size: 15.5px; }
     .exp .tags { margin-top: 4px; }
+    .exp-points { display: grid; gap: 10px; }
+    .exp-points li { position: relative; padding-left: 20px; color: var(--muted); font-size: 15px; line-height: 1.55; }
+    .exp-points li::before { content: ''; position: absolute; left: 2px; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+    .exp.edu { grid-column: 1 / -1; }
+    .exp .link-btn { justify-self: start; }
 
     /* =========================================================
        13. CONTACT
@@ -999,7 +1045,8 @@
     .footer-word span { background: linear-gradient(180deg, rgba(139,125,255,.5), rgba(139,125,255,0) 85%); -webkit-background-clip: text; background-clip: text; }
     .footer-bar { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; font-size: 14px; color: var(--muted); }
     .footer-bar nav { display: flex; gap: 22px; flex-wrap: wrap; }
-    .footer-bar nav a:hover { color: var(--text); }
+    .footer-bar nav a:hover, .footer-social a:hover { color: var(--text); }
+    .footer-social { display: flex; gap: 18px; }
     .to-top {
       display: inline-flex; align-items: center; gap: 10px; color: var(--text);
     }
@@ -1013,7 +1060,7 @@
     @media (max-width: 1180px) {
       .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .service { min-height: 300px; }
-      .nav-time { display: none; }
+      .nav-time, .nav-actions .nav-talk { display: none; }
     }
     @media (max-width: 1024px) {
       .featured { grid-template-columns: 1fr; }
@@ -1035,6 +1082,7 @@
       .nav-inner { padding: 0 6px 0 18px; }
       .hero { min-height: auto; padding-top: calc(var(--nav-h) + 56px); }
       .hero-layout { grid-template-columns: 1fr; gap: 64px; }
+      .hero-title { font-size: clamp(2.2rem, 5.6vw, 3.6rem); }
       .hero-visual { justify-self: center; max-width: 420px; margin: 0 auto; }
       .hero-foot { grid-template-columns: 1fr 1fr; }
       .scroll-cue { display: none; }
@@ -1048,6 +1096,7 @@
       body { font-size: 16px; }
       .btn { --h: 54px; padding: 0 24px; }
       .hero-ctas .btn { flex: 1 1 100%; }
+      .hero-title br { display: none; }
       .hero-visual { max-width: calc(100% - 28px); }
       .portrait::before { inset: 12px -12px -12px 12px; }
       .badge-rotating { width: 92px; height: 92px; left: auto; right: -20px; bottom: auto; top: -30px; }
@@ -1069,6 +1118,7 @@
       .hcb { grid-template-columns: 1fr; }
       .hcb-side { display: none; }
       .inbox-body { grid-template-columns: 1fr; }
+      .af-pop { width: 72%; }
       .inbox-detail { display: none; }
       .services-grid { grid-template-columns: 1fr; }
       .service { min-height: 0; }
@@ -1084,7 +1134,7 @@
       .footer-bar { flex-direction: column; align-items: flex-start; }
     }
     @media (max-width: 380px) {
-      .hero-title { font-size: 2.45rem; }
+      .hero-title { font-size: 2.05rem; }
       .featured-badges .pill:nth-child(3) { display: none; }
     }
 
@@ -1123,13 +1173,15 @@
           <li><a href="#about" data-link="about">About</a></li>
           <li><a href="#work" data-link="work">Work</a></li>
           <li><a href="#skills" data-link="skills">Skills</a></li>
+          <li><a href="#experience" data-link="experience">Experience</a></li>
           <li><a href="#contact" data-link="contact">Contact</a></li>
         </ul>
       </nav>
 
       <div class="nav-actions">
         <span class="nav-time" aria-label="Local time in Addis Ababa"><span data-clock>Addis Ababa</span></span>
-        <a href="#contact" class="btn btn-primary btn-sm" data-magnetic>Let's Talk</a>
+        <a href="#contact" class="btn btn-ghost btn-sm nav-talk" data-magnetic>Let's Talk</a>
+        <a href="assets/Dawit_Hailu_CV.pdf" class="btn btn-primary btn-sm" target="_blank" rel="noopener" download="Dawit_Hailu_CV.pdf" data-magnetic>Download CV</a>
         <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
           <span></span><span></span>
         </button>
@@ -1144,12 +1196,16 @@
         <li><a href="#about"><small>02</small>About</a></li>
         <li><a href="#work"><small>03</small>Work</a></li>
         <li><a href="#skills"><small>04</small>Skills</a></li>
-        <li><a href="#contact"><small>05</small>Contact</a></li>
+        <li><a href="#experience"><small>05</small>Experience</a></li>
+        <li><a href="#contact"><small>06</small>Contact</a></li>
       </ul>
     </nav>
     <div class="mobile-menu-foot">
-      <p>Available for websites, digital menus &amp; custom software in Addis Ababa and remotely.</p>
-      <a href="#contact" class="btn btn-primary">Let's Talk <svg class="icon icon-arrow-right arrow-r" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      <p>Open to internships and junior backend or full-stack roles, in Addis Ababa or remote.</p>
+      <div class="mobile-menu-actions">
+        <a href="assets/Dawit_Hailu_CV.pdf" class="btn btn-primary" target="_blank" rel="noopener" download="Dawit_Hailu_CV.pdf">Download CV</a>
+        <a href="#contact" class="btn btn-ghost">Let's Talk</a>
+      </div>
     </div>
   </div>
 
@@ -1168,49 +1224,50 @@
           <div class="hero-copy">
             <p class="availability" data-hero>
               <span class="pulse" aria-hidden="true"></span>
-              <span><strong>Available</strong> for new projects · Addis Ababa</span>
+              <span><strong>Open</strong> to internships &amp; junior roles · Addis Ababa</span>
             </p>
 
             <h1 class="hero-title" id="hero-title">
-              <span class="line"><span>Building Digital</span></span>
-              <span class="line"><span>Experiences That</span></span>
-              <span class="line"><span>Make an <em class="serif grad">Impact.</em></span></span>
+              <span class="line"><span>Software</span></span> <span class="line"><span>engineer</span></span> <span class="line"><span>building</span></span><br />
+              <span class="line"><span>Java</span></span> <span class="line"><span>and</span></span> <span class="line"><span>Spring</span></span> <span class="line"><span>Boot</span></span> <span class="line"><span>backends</span></span><br />
+              <span class="line"><span>and</span></span> <span class="line"><span>the</span></span> <span class="line"><span>apps</span></span> <span class="line"><span>that</span></span> <span class="line"><span><em class="serif grad">use</em></span></span> <span class="line"><span><em class="serif grad">them</em></span></span>
             </h1>
 
             <p class="hero-intro" data-hero>
-              Hey, I'm <strong>Dawit</strong> - a full-stack developer creating modern websites, powerful applications, and digital solutions for ambitious businesses.
+              Computer Science student at <strong>Mekelle University</strong>, former Backend Development Intern at <strong>Raras Technology</strong>, open to internships and junior roles.
             </p>
 
             <div class="hero-ctas" data-hero>
-              <a href="#work" class="btn btn-primary" data-magnetic>Explore My Work <svg class="icon icon-arrow-right arrow-r" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-              <a href="#contact" class="btn btn-ghost" data-magnetic>Let's Work Together</a>
+              <a href="#work" class="btn btn-primary" data-magnetic>View Projects <svg class="icon icon-arrow-right arrow-r" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+              <a href="assets/Dawit_Hailu_CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener" download="Dawit_Hailu_CV.pdf" data-magnetic>Download CV <svg class="icon icon-download" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg></a>
             </div>
           </div>
 
           <div class="hero-visual">
             <figure class="portrait">
               <div class="portrait-frame">
-                <!-- YOUR PHOTO: place it at assets/profile.jpg (portrait orientation works best, ~1000×1250px). -->
                 <img
                   src="assets/profile.jpg"
+                  srcset="assets/profile-480.webp 480w, assets/profile-640.webp 640w, assets/profile-880.webp 880w"
+                  sizes="(max-width: 640px) calc(100vw - 60px), 440px"
                   data-fallbacks="assets/profile.jpeg,assets/profile.png,assets/profile.webp"
                   onerror="window.__photoFallback && window.__photoFallback(this)"
-                  alt="Portrait of Dawit Hailu, full-stack developer based in Addis Ababa"
+                  alt="Portrait of Dawit Hailu, software engineer based in Addis Ababa"
                   width="880" height="1100" fetchpriority="high" decoding="async" />
                 <div class="portrait-fallback" aria-hidden="true"><span>DH</span></div>
                 <span class="portrait-tag" data-hero><svg class="icon icon-map-pin" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Addis Ababa, Ethiopia</span>
                 <figcaption class="portrait-caption">
                   <div>
                     <strong>Dawit Hailu</strong>
-                    <span>Full-Stack Developer &amp; Digital Solutions Builder</span>
+                    <span>Software Engineer · Backend &amp; Full-Stack</span>
                   </div>
                   <div class="portrait-coords" aria-hidden="true">9.03° N<br />38.74° E</div>
                 </figcaption>
               </div>
-              <a href="#work" class="badge-rotating" data-hero aria-label="Scroll to selected work">
+              <a href="#work" class="badge-rotating" data-hero aria-label="Software Engineer, Java, Spring Boot: scroll to selected work">
                 <svg class="ring" viewBox="0 0 120 120" aria-hidden="true">
                   <defs><path id="circlePath" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0" /></defs>
-                  <text><textPath href="#circlePath">Full-Stack Developer • Digital Solutions •</textPath></text>
+                  <text><textPath href="#circlePath">Software Engineer • Java • Spring Boot •</textPath></text>
                 </svg>
                 <span class="badge-core"><svg class="icon icon-arrow-down-right" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 7 10 10"/><path d="M17 7v10H7"/></svg></span>
               </a>
@@ -1220,8 +1277,8 @@
 
         <div class="hero-foot" data-hero>
           <div><span class="mono">Based in</span><strong>Addis Ababa, Ethiopia</strong></div>
-          <div><span class="mono">Focus</span><strong>Websites · Digital Menus · Web Apps</strong></div>
-          <a href="#about" class="scroll-cue" aria-label="Scroll to about section"><span class="mouse" aria-hidden="true"></span>Scroll to explore</a>
+          <div><span class="mono">Focus</span><strong>Java · Spring Boot · Full-Stack Apps</strong></div>
+          <a href="#about" class="scroll-cue"><span class="mouse" aria-hidden="true"></span>Scroll to explore</a>
         </div>
       </div>
     </section>
@@ -1230,10 +1287,10 @@
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
         <div class="marquee-group">
-          <span>Business Websites</span><i></i><span class="serif">Digital Menus</span><i></i><span>Web Applications</span><i></i><span class="serif">Management Systems</span><i></i><span>UI/UX Implementation</span><i></i><span class="serif">Full-Stack Development</span><i></i>
+          <span>Spring Boot APIs</span><i></i><span class="serif">Full-Stack Apps</span><i></i><span>PostgreSQL</span><i></i><span class="serif">Angular &amp; React</span><i></i><span>AI Integrations</span><i></i><span class="serif">Business Websites</span><i></i>
         </div>
         <div class="marquee-group">
-          <span>Business Websites</span><i></i><span class="serif">Digital Menus</span><i></i><span>Web Applications</span><i></i><span class="serif">Management Systems</span><i></i><span>UI/UX Implementation</span><i></i><span class="serif">Full-Stack Development</span><i></i>
+          <span>Spring Boot APIs</span><i></i><span class="serif">Full-Stack Apps</span><i></i><span>PostgreSQL</span><i></i><span class="serif">Angular &amp; React</span><i></i><span>AI Integrations</span><i></i><span class="serif">Business Websites</span><i></i>
         </div>
       </div>
     </div>
@@ -1252,37 +1309,38 @@
             <div class="about-values">
               <div class="value" data-reveal>
                 <svg class="icon icon-sparkles" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg>
-                <strong>Design that builds trust</strong>
-                <p>Clean, modern interfaces that make your business look as professional as it is.</p>
+                <strong>Interfaces people trust</strong>
+                <p>Clean, modern UIs that are clear to use and hold up on every screen.</p>
               </div>
               <div class="value" data-reveal>
                 <svg class="icon icon-smartphone" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
                 <strong>Mobile-first, always</strong>
-                <p>Your customers are on their phones - every screen is built for them first.</p>
+                <p>Most users are on their phones, so every screen is built and tested for them first.</p>
               </div>
               <div class="value" data-reveal>
                 <svg class="icon icon-code-xml" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
                 <strong>Solid engineering</strong>
-                <p>Full-stack skills from secure APIs to databases, so things keep working.</p>
+                <p>Secure APIs, sensible data models and code that keeps working after launch.</p>
               </div>
               <div class="value" data-reveal>
                 <svg class="icon icon-message-circle" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
                 <strong>Clear communication</strong>
-                <p>Plain language, regular updates and a process you can follow.</p>
+                <p>Plain language, regular updates and honest estimates.</p>
               </div>
             </div>
           </div>
 
           <div class="about-copy">
-            <p data-reveal>I'm Dawit Hailu, a full-stack developer based in Addis Ababa and a Computer Science student at Mekelle University.</p>
-            <p data-reveal>I have practical experience building full-stack applications, modern business websites, digital menu platforms and custom software solutions. During my internship at <strong style="color:var(--text);font-weight:500">Raras Technology</strong>, I worked on backend development and task management systems - hands-on experience with how real software is designed, built and maintained.</p>
-            <p data-reveal>I enjoy transforming business ideas into products that are beautiful, functional and reliable. My focus is helping restaurants, hotels, startups and local businesses establish a professional digital presence - from the first conversation to a launch your customers will notice.</p>
+            <p data-reveal>I'm Dawit Hailu, a software engineer based in Addis Ababa and a Computer Science student at Mekelle University.</p>
+            <p data-reveal>As a Backend Development Intern at <strong style="color:var(--text);font-weight:500">Raras Technology</strong> I built REST APIs, designed database schemas, fixed defects and contributed to the company's Task Management System. On my own I've built TaskFlow, a Spring Boot and Angular task platform, and AnswerFlow AI, a browser extension with its own Node.js API.</p>
+            <p data-reveal>I also freelance, building websites and business software for Ethiopian companies. Now I'm looking for an internship or junior backend or full-stack role where I can ship real features alongside an experienced team.</p>
 
             <dl class="facts" data-reveal>
               <div class="fact"><dt>Based in</dt><dd>Addis Ababa, Ethiopia</dd></div>
               <div class="fact"><dt>Education</dt><dd>Computer Science - Mekelle University</dd></div>
-              <div class="fact"><dt>Experience</dt><dd>Software Development Intern - Raras Technology</dd></div>
-              <div class="fact"><dt>Focus</dt><dd>Hotels, restaurants, startups &amp; local businesses</dd></div>
+              <div class="fact"><dt>Experience</dt><dd>Backend Development Intern - Raras Technology</dd></div>
+              <div class="fact"><dt>Focus</dt><dd>Java &amp; Spring Boot backends, full-stack apps</dd></div>
+              <div class="fact"><dt>Looking for</dt><dd>Internships &amp; junior backend or full-stack roles</dd></div>
             </dl>
           </div>
         </div>
@@ -1294,9 +1352,9 @@
       <div class="container">
         <div class="section-head split">
           <span class="eyebrow" data-reveal><b>02</b> Selected Work</span>
-          <h2 class="section-title" id="work-title" data-reveal>Projects built for <em class="serif grad">real businesses.</em></h2>
+          <h2 class="section-title" id="work-title" data-reveal>Projects I've <em class="serif grad">designed &amp; shipped.</em></h2>
           <div style="display:grid;gap:14px" data-reveal>
-            <p class="section-lead">From restaurant menus to full-stack platforms - a selection of websites and software I've designed and developed.</p>
+            <p class="section-lead">Full-stack platforms, an AI browser extension, desktop business software and live client sites - each with the stack it was built on.</p>
             <p class="work-note"><svg class="icon icon-info" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>Previews are stylised illustrations - open the live sites and code for the real thing.</p>
           </div>
         </div>
@@ -1309,7 +1367,7 @@
               <span class="pill live">Live</span>
               <span class="pill"><svg class="icon icon-qr-code" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>QR Menu</span>
             </div>
-            <span class="project-index">01 / 06 - Featured Project</span>
+            <span class="project-index">01 / 07 - Featured Project</span>
             <h3 id="p-yeajet">Yeajet - <em class="serif">Digital Menu</em></h3>
             <p class="featured-sub">A mobile-friendly digital menu experience allowing customers to browse restaurant offerings by scanning a QR code.</p>
             <ul class="benefits">
@@ -1386,16 +1444,46 @@
               </div>
             </a>
             <div class="project-body">
-              <div class="project-meta"><span class="project-cat">Full-Stack Application</span><span class="project-index">02 / 06</span></div>
+              <div class="project-meta"><span class="project-cat">Full-Stack Application</span><span class="project-index">02 / 07</span></div>
               <h3 id="p-taskflow">TaskFlow<small>Full-Stack Task Management Platform</small></h3>
-              <p class="project-desc">A full-featured task management application designed to help teams organize projects, collaborate, and track productivity.</p>
+              <p class="project-desc">A multi-tenant task manager with a layered Spring Boot REST API and a lazy-loaded Angular client. Work is organised as workspace, project, task and subtask, and every query is scoped to what the signed-in user can access.</p>
               <ul class="feature-list" aria-label="Key features">
-                <li>User authentication</li><li>Team collaboration</li><li>Task assignments</li><li>Project organization</li>
-                <li>Progress tracking</li><li>Task dependencies</li><li>Recurring tasks</li><li>User profiles</li>
+                <li>JWT auth with refresh tokens</li><li>Google &amp; GitHub sign-in</li><li>Workspaces &amp; projects with roles</li>
+                <li>Assignees, comments &amp; attachments</li><li>Task dependencies</li><li>Recurring tasks</li>
+                <li>Nested tasks with progress roll-up</li><li>Search, filters, sorting &amp; pagination</li><li>Per-task audit history</li>
               </ul>
-              <ul class="tags" aria-label="Technologies"><li>Angular</li><li>Spring Boot</li><li>Java</li><li>PostgreSQL</li><li>JWT</li></ul>
+              <ul class="tags" aria-label="Technologies"><li>Java</li><li>Spring Boot</li><li>Spring Security</li><li>Angular</li><li>PostgreSQL</li><li>Flyway</li><li>JWT</li><li>OpenAPI</li></ul>
               <div class="project-foot">
                 <a href="https://github.com/dawit-hailuu/taskmanger" target="_blank" rel="noopener noreferrer" class="link-btn solid"><svg class="gh" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>View on GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- AnswerFlow AI -->
+          <article class="card project span-5" data-reveal data-spotlight aria-labelledby="p-answerflow">
+            <div class="project-preview pv-answer" aria-hidden="true">
+              <div class="mock">
+                <div class="win-bar"><i></i><i></i><i></i><span class="win-title">AnswerFlow AI - Extension</span></div>
+                <div class="af">
+                  <span class="b lg w50"></span><span class="b w80"></span><span class="b w70"></span><span class="b w90"></span><span class="b w60"></span><span class="b w80"></span><span class="b w40"></span>
+                  <div class="af-pop">
+                    <div class="af-head"><b></b>AnswerFlow AI</div>
+                    <div class="af-prov"><span class="on"></span><span></span><span></span></div>
+                    <div class="af-q"></div>
+                    <div class="af-ans"><span class="b w90"></span><span class="b w80"></span><span class="b w60"></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span class="project-cat">AI Browser Extension</span><span class="project-index">03 / 07</span></div>
+              <h3 id="p-answerflow">AnswerFlow AI<small>Browser Extension &amp; API</small></h3>
+              <p class="project-desc">A Manifest V3 browser extension with a multi-provider design for switching between AI services, backed by its own Node.js and Express API with PostgreSQL.</p>
+              <ul class="feature-list" aria-label="Key features"><li>Manifest V3 extension</li><li>Switchable AI providers</li><li>Own REST API</li><li>PostgreSQL storage</li></ul>
+              <ul class="tags" aria-label="Technologies"><li>React</li><li>TypeScript</li><li>Vite</li><li>Tailwind CSS</li><li>Node.js</li><li>Express</li><li>PostgreSQL</li></ul>
+              <div class="project-foot">
+                <a href="https://github.com/dawit-hailuu" class="link-btn solid" data-repo="answerflow" target="_blank" rel="noopener noreferrer" hidden><svg class="gh" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>View on GitHub</a>
+                <span class="note" data-repo-fallback="answerflow"><svg class="icon icon-monitor" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>Demo on request</span>
               </div>
             </div>
           </article>
@@ -1416,7 +1504,7 @@
               </div>
             </a>
             <div class="project-body">
-              <div class="project-meta"><span class="project-cat">Corporate Website</span><span class="project-index">03 / 06</span></div>
+              <div class="project-meta"><span class="project-cat">Corporate Website</span><span class="project-index">04 / 07</span></div>
               <h3 id="p-eko">Eko Cup Trading<small>Corporate Website</small></h3>
               <p class="project-desc">A professional business website showcasing products, company information, and services through a modern digital experience.</p>
               <ul class="tags" aria-label="Highlights"><li>Responsive</li><li>Product Showcase</li><li>Vercel</li></ul>
@@ -1428,7 +1516,7 @@
           </article>
 
           <!-- Wina Juice -->
-          <article class="card project span-5" data-reveal data-spotlight aria-labelledby="p-wina">
+          <article class="card project span-7" data-reveal data-spotlight aria-labelledby="p-wina">
             <a class="project-preview pv-wina" href="https://github.com/dawit-hailuu/winajuice" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
               <div class="mock light">
                 <div class="win-bar"><i></i><i></i><i></i><span class="url" style="max-width:160px"></span></div>
@@ -1442,10 +1530,10 @@
               </div>
             </a>
             <div class="project-body">
-              <div class="project-meta"><span class="project-cat">Business Website</span><span class="project-index">04 / 06</span></div>
+              <div class="project-meta"><span class="project-cat">Business Website</span><span class="project-index">05 / 07</span></div>
               <h3 id="p-wina">Wina Juice<small>Business Website</small></h3>
               <p class="project-desc">A modern, responsive website designed to establish a professional digital presence for a juice and beverage business.</p>
-              <ul class="tags" aria-label="Technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Vercel</li></ul>
+              <ul class="tags" aria-label="Technologies"><li>Next.js</li><li>React</li><li>TypeScript</li><li>Tailwind CSS</li></ul>
               <div class="project-foot">
                 <a href="https://github.com/dawit-hailuu/winajuice" target="_blank" rel="noopener noreferrer" class="link-btn solid"><svg class="gh" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>View on GitHub</a>
               </div>
@@ -1482,7 +1570,7 @@
               </div>
             </div>
             <div class="project-body">
-              <div class="project-meta"><span class="project-cat">Desktop Business Software</span><span class="project-index">05 / 06</span></div>
+              <div class="project-meta"><span class="project-cat">Desktop Business Software</span><span class="project-index">06 / 07</span></div>
               <h3 id="p-hcb">HCB Factory<small>Factory Management System</small></h3>
               <p class="project-desc">A custom business management application designed to support inventory, production, and sales operations.</p>
               <ul class="feature-list" aria-label="Modules"><li>Inventory</li><li>Production</li><li>Sales operations</li></ul>
@@ -1492,7 +1580,7 @@
           </article>
 
           <!-- Workflow Inbox -->
-          <article class="card project wide span-12" data-reveal data-spotlight aria-labelledby="p-inbox">
+          <article class="card project span-5" data-reveal data-spotlight aria-labelledby="p-inbox">
             <div class="project-preview pv-inbox" aria-hidden="true">
               <div class="mock inbox-mock">
                 <div class="win-bar"><i></i><i></i><i></i><span class="win-title" style="color:rgba(0,0,0,.45)">Workflow Inbox</span></div>
@@ -1517,7 +1605,7 @@
               </div>
             </div>
             <div class="project-body">
-              <div class="project-meta"><span class="project-cat">Enterprise UI</span><span class="project-index">06 / 06</span></div>
+              <div class="project-meta"><span class="project-cat">Enterprise UI</span><span class="project-index">07 / 07</span></div>
               <h3 id="p-inbox">Workflow Inbox<small>Enterprise Workflow Interface</small></h3>
               <p class="project-desc">A modern workflow management interface developed with Angular, focusing on usability, responsive layouts, and structured business workflows.</p>
               <ul class="feature-list" aria-label="Focus areas"><li>Usability</li><li>Responsive layouts</li><li>Structured workflows</li></ul>
@@ -1528,13 +1616,112 @@
       </div>
     </section>
 
-    <!-- ===================== SERVICES ===================== -->
+    <!-- ===================== SKILLS ===================== -->
+    <section class="section" id="skills" aria-labelledby="skills-title" style="padding-top: 0">
+      <div class="container">
+        <div class="section-head split">
+          <span class="eyebrow" data-reveal><b>03</b> Technical Skills</span>
+          <h2 class="section-title" id="skills-title" data-reveal>The tools behind <em class="serif grad">the work.</em></h2>
+          <p class="section-lead" data-reveal>Grouped by layer, each with the projects where I've actually used it.</p>
+        </div>
+
+        <div class="skills-layout">
+          <aside class="card stack-card" data-reveal data-spotlight aria-label="Full-stack overview">
+            <span class="eyebrow">End to end</span>
+            <h3>One developer, the whole stack.</h3>
+            <p>Every layer of a modern product, built to work together.</p>
+            <div class="stack">
+              <div class="layer"><span class="ic"><svg class="icon icon-palette" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></span><div><strong>Interface</strong><span>Angular · React · Next.js</span></div></div>
+              <div class="layer"><span class="ic"><svg class="icon icon-server" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></span><div><strong>APIs &amp; Logic</strong><span>Spring Boot · Node.js · REST</span></div></div>
+              <div class="layer"><span class="ic"><svg class="icon icon-database" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg></span><div><strong>Data</strong><span>PostgreSQL · MySQL · SQLite</span></div></div>
+              <div class="layer"><span class="ic"><svg class="icon icon-rocket" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span><div><strong>Ship</strong><span>Git · Docker · Vercel</span></div></div>
+            </div>
+          </aside>
+
+          <div class="skill-rows">
+            <div class="skill-row" data-reveal>
+              <div><h3><small>01</small>Languages</h3><p><b>Used in:</b> TaskFlow (Java), AnswerFlow AI and Workflow Inbox (TypeScript), HCB Factory (Python)</p></div>
+              <ul class="skill-chips"><li>Java</li><li>Python</li><li>TypeScript</li><li>JavaScript</li><li>SQL</li><li>HTML</li><li>CSS</li></ul>
+            </div>
+            <div class="skill-row" data-reveal>
+              <div><h3><small>02</small>Backend</h3><p><b>Used in:</b> TaskFlow API, Raras internship, AnswerFlow AI backend</p></div>
+              <ul class="skill-chips"><li>Spring Boot</li><li>Node.js</li><li>Express.js</li><li>REST APIs</li><li>JWT Authentication</li><li>Maven</li></ul>
+            </div>
+            <div class="skill-row" data-reveal>
+              <div><h3><small>03</small>Frontend</h3><p><b>Used in:</b> TaskFlow UI, Workflow Inbox, AnswerFlow AI, client websites</p></div>
+              <ul class="skill-chips"><li>Angular</li><li>React</li><li>Next.js</li><li>Tailwind CSS</li><li>Angular Material</li></ul>
+            </div>
+            <div class="skill-row" data-reveal>
+              <div><h3><small>04</small>Databases</h3><p><b>Used in:</b> TaskFlow, AnswerFlow AI, HCB Factory</p></div>
+              <ul class="skill-chips"><li>PostgreSQL</li><li>MySQL</li><li>SQLite</li></ul>
+            </div>
+            <div class="skill-row special" data-reveal>
+              <div><h3><small>05</small>AI &amp; Machine Learning</h3><p><b>Used in:</b> AnswerFlow AI</p></div>
+              <ul class="skill-chips"><li>LLM APIs</li><li>RAG</li><li>Embeddings</li><li>NLP</li><li>Prompt Engineering</li><li>TensorFlow</li><li>Keras</li><li>PyTorch</li></ul>
+            </div>
+            <div class="skill-row" data-reveal>
+              <div><h3><small>06</small>Desktop</h3><p><b>Used in:</b> HCB Factory system</p></div>
+              <ul class="skill-chips"><li>Python</li><li>PyQt5</li></ul>
+            </div>
+            <div class="skill-row" data-reveal>
+              <div><h3><small>07</small>Tools</h3><p><b>Used in:</b> day-to-day development and deployment across these projects</p></div>
+              <ul class="skill-chips"><li>Git</li><li>GitHub</li><li>GitLab</li><li>Docker</li><li>Vite</li><li>Figma</li><li>Vercel</li><li>VS Code</li></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE & EDUCATION ===================== -->
+    <section class="section" id="experience" aria-labelledby="exp-title" style="padding-top: 0">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" data-reveal><b>04</b> Experience &amp; Education</span>
+          <h2 class="section-title" id="exp-title" data-reveal>Where I've <em class="serif grad">learned &amp; built.</em></h2>
+        </div>
+        <div class="exp-grid">
+          <article class="card exp" data-reveal data-spotlight>
+            <div class="exp-top"><span class="exp-icon"><svg class="icon icon-briefcase" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg></span><span class="pill">Internship</span></div>
+            <h3>Backend Development Intern</h3>
+            <p class="role">Raras Technology <span>· Addis Ababa</span></p>
+            <ul class="exp-points">
+              <li>Built and maintained REST APIs and backend services, implementing core business logic and data access layers</li>
+              <li>Designed relational database schemas and wrote SQL queries behind daily application features</li>
+              <li>Found and fixed defects across the codebase, making existing endpoints more reliable</li>
+              <li>Contributed to the company's Task Management System</li>
+            </ul>
+            <ul class="tags"><li>REST APIs</li><li>SQL</li><li>Database Design</li><li>Debugging</li></ul>
+          </article>
+          <article class="card exp" data-reveal data-spotlight>
+            <div class="exp-top"><span class="exp-icon"><svg class="icon icon-code-xml" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg></span><span class="pill">Freelance</span></div>
+            <h3>Freelance Software Developer</h3>
+            <p class="role">Self-employed <span>· Addis Ababa</span></p>
+            <p>Building production websites and business software for Ethiopian companies.</p>
+            <ul class="exp-points">
+              <li>Shipped live client sites, including the Yeajet QR digital menu and the Eko Cup Trading corporate website</li>
+              <li>Built HCB Factory, a Python and PyQt5 desktop system for inventory, production and sales</li>
+              <li>Own each project end to end: requirements with the client, design, build and deployment</li>
+            </ul>
+            <a href="#services" class="link-btn">See freelance work <svg class="icon icon-arrow-down-right" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 7 10 10"/><path d="M17 7v10H7"/></svg></a>
+          </article>
+          <article class="card exp edu" data-reveal data-spotlight>
+            <div class="exp-top"><span class="exp-icon"><svg class="icon icon-graduation-cap" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span><span class="pill">Education</span></div>
+            <h3>Mekelle University</h3>
+            <p class="role">Computer Science Student</p>
+            <p>Studying Computer Science while applying it to real projects - websites, full-stack applications and business software.</p>
+            <ul class="tags"><li>Computer Science</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FREELANCE WORK ===================== -->
     <section class="section" id="services" aria-labelledby="services-title" style="padding-top: 0">
       <div class="container">
         <div class="section-head split">
-          <span class="eyebrow" data-reveal><b>03</b> Services</span>
-          <h2 class="section-title" id="services-title" data-reveal>What I can build for <em class="serif grad">your business.</em></h2>
-          <p class="section-lead" data-reveal>Clear, practical digital solutions - designed around how your business actually works and how your customers actually browse.</p>
+          <span class="eyebrow" data-reveal><b>05</b> Freelance Work</span>
+          <h2 class="section-title" id="services-title" data-reveal>Freelance <em class="serif grad">work.</em></h2>
+          <p class="section-lead" data-reveal>Alongside my studies I build websites and business software for Ethiopian companies. If you run a business and need one, this is what I offer and how I work.</p>
         </div>
 
         <div class="services-grid">
@@ -1590,101 +1777,27 @@
       </div>
     </section>
 
-    <!-- ===================== SKILLS ===================== -->
-    <section class="section" id="skills" aria-labelledby="skills-title" style="padding-top: 0">
-      <div class="container">
-        <div class="section-head split">
-          <span class="eyebrow" data-reveal><b>04</b> Technical Expertise</span>
-          <h2 class="section-title" id="skills-title" data-reveal>The tools behind <em class="serif grad">the work.</em></h2>
-          <p class="section-lead" data-reveal>A full-stack toolkit - from the interface your customers see to the systems that power it behind the scenes.</p>
-        </div>
-
-        <div class="skills-layout">
-          <aside class="card stack-card" data-reveal data-spotlight aria-label="Full-stack overview">
-            <span class="eyebrow">End to end</span>
-            <h3>One developer, the whole stack.</h3>
-            <p>Every layer of a modern product, built to work together.</p>
-            <div class="stack">
-              <div class="layer"><span class="ic"><svg class="icon icon-palette" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></span><div><strong>Design &amp; Interface</strong><span>Figma · Angular · React</span></div></div>
-              <div class="layer"><span class="ic"><svg class="icon icon-server" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></span><div><strong>APIs &amp; Logic</strong><span>Spring Boot · Python · REST</span></div></div>
-              <div class="layer"><span class="ic"><svg class="icon icon-database" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg></span><div><strong>Data</strong><span>PostgreSQL · MySQL · SQLite</span></div></div>
-              <div class="layer"><span class="ic"><svg class="icon icon-rocket" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></span><div><strong>Launch</strong><span>Git · GitHub · Vercel</span></div></div>
-            </div>
-          </aside>
-
-          <div class="skill-rows">
-            <div class="skill-row" data-reveal>
-              <div><h3><small>01</small>Frontend</h3><p>Responsive, accessible interfaces that look sharp on every screen.</p></div>
-              <ul class="skill-chips"><li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>TypeScript</li><li>Angular</li><li>React</li><li>Responsive Web Design</li></ul>
-            </div>
-            <div class="skill-row" data-reveal>
-              <div><h3><small>02</small>Backend</h3><p>Secure APIs and business logic that keep products dependable.</p></div>
-              <ul class="skill-chips"><li>Java</li><li>Spring Boot</li><li>Python</li><li>REST APIs</li><li>Authentication &amp; Authorization</li></ul>
-            </div>
-            <div class="skill-row" data-reveal>
-              <div><h3><small>03</small>Databases</h3><p>Structured data models for real business operations.</p></div>
-              <ul class="skill-chips"><li>PostgreSQL</li><li>MySQL</li><li>SQLite</li></ul>
-            </div>
-            <div class="skill-row" data-reveal>
-              <div><h3><small>04</small>Tools</h3><p>A professional workflow from design to deployment.</p></div>
-              <ul class="skill-chips"><li>Git</li><li>GitHub</li><li>GitLab</li><li>VS Code</li><li>Figma</li><li>Vercel</li></ul>
-            </div>
-            <div class="skill-row special" data-reveal>
-              <div><h3><small>05</small>Specialties</h3><p>Where design, engineering and business needs meet.</p></div>
-              <ul class="skill-chips"><li>UI/UX Implementation</li><li>Business Website Development</li><li>Digital Menu Systems</li><li>Inventory Management Systems</li><li>Full-Stack Application Development</li></ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== EXPERIENCE & EDUCATION ===================== -->
-    <section class="section" id="experience" aria-labelledby="exp-title" style="padding-top: 0">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow" data-reveal><b>05</b> Experience &amp; Education</span>
-          <h2 class="section-title" id="exp-title" data-reveal>Where I've <em class="serif grad">learned &amp; built.</em></h2>
-        </div>
-        <div class="exp-grid">
-          <article class="card exp" data-reveal data-spotlight>
-            <div class="exp-top"><span class="exp-icon"><svg class="icon icon-briefcase" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg></span><span class="pill">Internship</span></div>
-            <h3>Raras Technology</h3>
-            <p class="role">Software Development Intern</p>
-            <p>Worked on backend development and task management systems, gaining professional experience building and maintaining real software.</p>
-            <ul class="tags"><li>Backend Development</li><li>Task Management Systems</li></ul>
-          </article>
-          <article class="card exp" data-reveal data-spotlight>
-            <div class="exp-top"><span class="exp-icon"><svg class="icon icon-graduation-cap" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg></span><span class="pill">Education</span></div>
-            <h3>Mekelle University</h3>
-            <p class="role">Computer Science Student</p>
-            <p>Studying Computer Science while applying it to real projects - websites, full-stack applications and business software.</p>
-            <ul class="tags"><li>Computer Science</li></ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <!-- ===================== CONTACT ===================== -->
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="container">
         <span class="eyebrow" data-reveal><b>06</b> Contact</span>
         <h2 class="contact-title" id="contact-title">
-          <span class="line"><span>Have a Project in Mind?</span></span>
-          <span class="line"><span>Let's Build Something <em class="serif grad">Great.</em></span></span>
+          <span class="line"><span>Hiring an Intern or Junior Dev?</span></span>
+          <span class="line"><span>Let's <em class="serif grad">Talk.</em></span></span>
         </h2>
-        <p class="contact-lead" data-reveal>Whether you need a modern business website, a digital menu, or a custom application, I'd love to help bring your idea to life.</p>
+        <p class="contact-lead" data-reveal>I'm open to internships and junior backend or full-stack roles, in Addis Ababa or remote. Freelance enquiries are welcome through the same channels.</p>
 
         <div class="contact-actions" data-reveal>
-          <a href="#" class="btn btn-primary" data-contact="email" data-magnetic><svg class="icon icon-mail" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Send an Email</a>
-          <a href="#" class="btn btn-wa" data-contact="whatsapp" target="_blank" rel="noopener noreferrer" data-magnetic>
+          <a href="mailto:dawith907@gmail.com" class="btn btn-primary" data-magnetic><svg class="icon icon-mail" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>Send an Email</a>
+          <a href="https://wa.me/251943030048" class="btn btn-wa" target="_blank" rel="noopener noreferrer" data-magnetic>
             <svg class="brand" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             Chat on WhatsApp
           </a>
         </div>
 
         <div class="email-box" data-reveal>
-          <a href="#" data-contact="email-text" aria-label="Email address"></a>
-          <button type="button" class="copy-btn" data-copy-email aria-label="Copy email address">
+          <a href="mailto:dawith907@gmail.com">dawith907@gmail.com</a>
+          <button type="button" class="copy-btn" data-copy-email aria-label="Copy email address dawith907@gmail.com">
             <svg class="icon icon-copy cp" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><svg class="icon icon-check ok" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span class="label">Copy</span>
           </button>
         </div>
@@ -1694,7 +1807,7 @@
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
             GitHub
           </a>
-          <a class="social" href="#" data-contact="linkedin" target="_blank" rel="noopener noreferrer">
+          <a class="social" href="https://www.linkedin.com/in/dawit-hailu-1ba74b274" target="_blank" rel="noopener noreferrer">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             LinkedIn
           </a>
@@ -1719,8 +1832,12 @@
           <p style="color:var(--dim)">Designed &amp; Developed by Dawit.</p>
         </div>
         <nav aria-label="Footer">
-          <a href="#about">About</a><a href="#work">Work</a><a href="#services">Services</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+          <a href="#about">About</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#services">Freelance</a><a href="#contact">Contact</a>
         </nav>
+        <div class="footer-social">
+          <a href="https://github.com/dawit-hailuu" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/dawit-hailu-1ba74b274" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
         <a href="#home" class="to-top" data-to-top aria-label="Back to top"><span>Back to top</span><span class="circle"><svg class="icon icon-arrow-up" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></svg></span></a>
       </div>
     </div>
@@ -1729,14 +1846,9 @@
   <div class="toast" role="status" aria-live="polite"><svg class="icon icon-check" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span data-toast-text>Email copied to clipboard</span></div>
 
   <script>
-    /* =========================================================
-       CONTACT DETAILS - replace these placeholders with your own.
-       ========================================================= */
     const CONFIG = {
-      email: 'dawith907@gmail.com',                            // Your email address
-      whatsapp: '251943030048',                                // WhatsApp number, international format, digits only
-      whatsappMessage: "Hello Dawit, I saw your portfolio and I'd like to discuss a project.",
-      linkedin: 'https://www.linkedin.com/in/your-profile/'    // TODO: your LinkedIn profile URL
+      email: 'dawith907@gmail.com',
+      answerflowRepo: '' // AnswerFlow AI GitHub URL; leave empty to show "Demo on request"
     };
 
     // Runs immediately (the DOM above is already parsed) so links, copy and navigation never wait on a CDN.
@@ -1745,22 +1857,13 @@
       const reduceMotion = root.classList.contains('reduced-motion');
       const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-      /* ---------- Contact links ---------- */
-      const placeholders = [];
-      if (CONFIG.email.includes('example.com')) placeholders.push('email');
-      if (/^2519?0+$/.test(CONFIG.whatsapp)) placeholders.push('whatsapp');
-      if (CONFIG.linkedin.includes('your-profile')) placeholders.push('linkedin');
-      if (placeholders.length) console.info('[portfolio] Replace placeholder contact details in CONFIG:', placeholders.join(', '));
-
-      const mailto = `mailto:${CONFIG.email}?subject=${encodeURIComponent('Project inquiry')}`;
-      const wa = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(CONFIG.whatsappMessage)}`;
-      document.querySelectorAll('[data-contact]').forEach((el) => {
-        const type = el.dataset.contact;
-        if (type === 'email') el.href = mailto;
-        if (type === 'email-text') { el.href = mailto; el.textContent = CONFIG.email; }
-        if (type === 'whatsapp') el.href = wa;
-        if (type === 'linkedin') el.href = CONFIG.linkedin;
-      });
+      /* ---------- Project repo links ---------- */
+      if (CONFIG.answerflowRepo) {
+        const repo = document.querySelector('[data-repo="answerflow"]');
+        repo.href = CONFIG.answerflowRepo;
+        repo.hidden = false;
+        document.querySelector('[data-repo-fallback="answerflow"]').hidden = true;
+      }
 
       /* ---------- Copy email ---------- */
       const toast = document.querySelector('.toast');
@@ -1842,7 +1945,7 @@
       onScroll();
 
       // Active section highlighting
-      const navMap = { home: 'home', about: 'about', work: 'work', services: 'work', skills: 'skills', experience: 'skills', contact: 'contact' };
+      const navMap = { home: 'home', about: 'about', work: 'work', skills: 'skills', experience: 'experience', services: null, contact: 'contact' };
       const links = document.querySelectorAll('.nav-links a');
       const io = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -1906,7 +2009,7 @@
             .from('.nav-inner', { y: -20, duration: 1 }, 0)
             .to('.availability', { opacity: 1, duration: .8 }, .1)
             .from('.availability', { y: 16, duration: .8 }, .1)
-            .to('.hero-title .line > span', { y: 0, duration: 1.3, stagger: .1 }, .15)
+            .to('.hero-title .line > span', { y: 0, duration: 1.3, stagger: .04 }, .15)
             .to('.portrait-frame', { clipPath: 'inset(0% 0% 0% 0% round 30px)', duration: 1.5, ease: 'expo.inOut' }, .1)
             .from('.portrait-frame img', { scale: 1.3, duration: 2, ease: 'expo.out' }, .4)
             .to('.hero-intro, .hero-ctas', { opacity: 1, duration: 1 }, .7)
